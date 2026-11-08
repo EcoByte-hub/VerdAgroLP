@@ -5,6 +5,7 @@ import Problem from './components/sections/Problem';
 import Solution from './components/sections/Solution';
 import Diagnostico from './components/sections/Diagnostico';
 import Modules from './components/sections/Modules';
+import Traceability from './components/sections/Traceability';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Solution />
         <Diagnostico />
         <Modules />
+        <Traceability />
       </main>
     </ClickSpark>
   );
