@@ -33,11 +33,11 @@ export default function Hero() {
             />
           </div>
 
-          <h1 className="mt-8 text-[clamp(3rem,8vw,6.5rem)] text-mata-900">
+          <h1 className="h-display mt-8 text-[clamp(3rem,7.4vw,6.25rem)] leading-[0.98] text-mata-900">
             <SplitText
               text="Do campo ao"
               tag="span"
-              className="h-display block font-normal"
+              className="block! font-normal"
               textAlign="left"
               splitType="chars"
               delay={35}
@@ -48,14 +48,13 @@ export default function Hero() {
             <SplitText
               text="crédito de carbono."
               tag="span"
-              className="h-display block font-light italic text-musgo"
+              className="block! pb-[0.12em] font-light italic text-musgo"
               textAlign="left"
-              splitType="chars"
-              delay={35}
+              splitType="words"
+              delay={120}
               duration={1}
               trigger="load"
               mask
-              hoverEffect="wave"
             />
           </h1>
 
@@ -63,8 +62,11 @@ export default function Hero() {
             Inteligência ambiental e marketplace que conecta{' '}
             <RotatingText
               texts={['produtores rurais', 'cooperativas', 'empresas compradoras']}
-              mainClassName="inline-flex overflow-hidden rounded-lg bg-mata-900 px-2 py-0.5 align-bottom font-semibold text-broto"
-              staggerDuration={0.02}
+              highlight
+              highlightColor="#0e2a1f"
+              mainClassName="inline-flex! align-bottom font-semibold"
+              elementLevelClassName="text-broto"
+              staggerDuration={0.012}
               rotationInterval={2600}
               effect="slide"
             />{' '}
