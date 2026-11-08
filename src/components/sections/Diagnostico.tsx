@@ -52,7 +52,7 @@ export default function Diagnostico() {
   };
 
   return (
-    <section id="diagnostico" className="relative bg-palha py-28 sm:py-36">
+    <section id="diagnostico" className="relative bg-areia/45 py-28 sm:py-36">
       <div className="container-va">
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>

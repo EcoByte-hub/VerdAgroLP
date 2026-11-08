@@ -4,6 +4,7 @@ import Hero from './components/sections/Hero';
 import Problem from './components/sections/Problem';
 import Solution from './components/sections/Solution';
 import Diagnostico from './components/sections/Diagnostico';
+import Modules from './components/sections/Modules';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Problem />
         <Solution />
         <Diagnostico />
+        <Modules />
       </main>
     </ClickSpark>
   );
