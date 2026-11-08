@@ -7,6 +7,7 @@ import Diagnostico from './components/sections/Diagnostico';
 import Modules from './components/sections/Modules';
 import Traceability from './components/sections/Traceability';
 import Market from './components/sections/Market';
+import Business from './components/sections/Business';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Modules />
         <Traceability />
         <Market />
+        <Business />
       </main>
     </ClickSpark>
   );
