@@ -1,111 +1,206 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..800,50;1,9..144,300..800,50&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+/* ==========================================================================
+   VerdAgro — Design tokens "Terra Viva"
+   Documentação completa em /STYLEGUIDE.md e na rota #styleguide
+   ========================================================================== */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  /* Cores — base */
+  --color-mata-950: #08180f;
+  --color-mata-900: #0e2a1f;
+  --color-mata-800: #153828;
+  --color-mata-700: #1f4a35;
+  --color-musgo: #2e5e43;
+  --color-folha: #4f8a5b;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  /* Cores — acento */
+  --color-broto: #c5f25c;
+  --color-broto-300: #d9f78f;
+  --color-broto-700: #56751a;
+
+  /* Cores — neutros quentes */
+  --color-palha: #f3eee2;
+  --color-palha-50: #faf8f2;
+  --color-areia: #e6dcc6;
+  --color-argila: #b9ab8c;
+  --color-tinta: #101814;
+  --color-tinta-soft: #44524a;
+
+  /* Cores — terra (estado "estimativa") */
+  --color-cerrado: #a34a26;
+  --color-cerrado-300: #e39a75;
+
+  /* Tipografia */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Raios */
+  --radius-card: 1.75rem;
+  --radius-pill: 999px;
+
+  /* Easing */
+  --ease-brota: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-all duration-300;
+  transition-timing-function: var(--ease-brota);
+}
+
+@utility tag {
+  @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-mono text-[10.5px] font-medium tracking-wider uppercase;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-palha font-sans text-tinta;
+  }
+
+  ::selection {
+    background: var(--color-broto);
+    color: var(--color-mata-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-broto-700);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+@layer components {
+  .container-va {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.18em] uppercase;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block size-1.5 rounded-full bg-current;
+  }
+
+  .h-display {
+    @apply font-display leading-[0.95] tracking-[-0.02em];
+    font-variation-settings: 'SOFT' 50, 'opsz' 144;
+  }
+
+  .h-section {
+    @apply font-display text-4xl leading-[1.02] tracking-[-0.02em] sm:text-5xl lg:text-6xl;
+    font-variation-settings: 'SOFT' 50, 'opsz' 144;
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-tinta-soft sm:text-xl;
+  }
+
+  /* Botões */
+  .btn-primary {
+    @apply btn bg-broto text-mata-900 shadow-[0_10px_30px_-10px_rgba(197,242,92,0.7)] hover:bg-broto-300 hover:shadow-[0_14px_40px_-10px_rgba(197,242,92,0.9)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-current/20 hover:border-current/50 hover:bg-current/5;
+  }
+
+  /* Selos de estado — regra de ouro: estimativa ≠ certificado */
+  .tag-estimativa {
+    @apply tag border border-dashed border-cerrado text-cerrado;
+  }
+
+  .tag-certificado {
+    @apply tag bg-broto text-mata-900;
+  }
+
+  .tag-demo {
+    @apply tag border border-current/25 opacity-80;
+  }
+
+  /* Textura de grade topográfica */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+@keyframes va-dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+@keyframes va-scan {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
   }
 }
-p {
-  margin: 0;
+
+@keyframes va-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+@keyframes va-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

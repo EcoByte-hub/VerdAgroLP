@@ -166,7 +166,7 @@ function VelocityText({
   const fling = useRef<number>(0);
   const drag = useRef({ active: false, pointerId: -1, lastX: 0, lastTime: 0, velocity: 0, travel: 0 });
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     if (reduceMotion) return;
 
     const grab = drag.current;
