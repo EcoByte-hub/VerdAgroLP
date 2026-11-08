@@ -9,6 +9,8 @@ import Traceability from './components/sections/Traceability';
 import Market from './components/sections/Market';
 import Business from './components/sections/Business';
 import Trust from './components/sections/Trust';
+import CTA from './components/sections/CTA';
+import Footer from './components/layout/Footer';
 
 export default function App() {
   return (
@@ -24,7 +26,9 @@ export default function App() {
         <Market />
         <Business />
         <Trust />
+        <CTA />
       </main>
+      <Footer />
     </ClickSpark>
   );
 }
