@@ -43,7 +43,7 @@ export default function Solution() {
                 role="tab"
                 aria-selected={active === key}
                 onClick={() => setActive(key)}
-                className={`relative z-10 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-300 ${
+                className={`relative z-10 inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-colors duration-300 sm:px-5 ${
                   active === key ? 'text-mata-900' : 'text-palha/70 hover:text-palha'
                 }`}
               >
@@ -54,7 +54,7 @@ export default function Solution() {
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
-                <Icon size={16} />
+                <Icon size={16} className="hidden sm:block" />
                 {audiences[key].label}
               </button>
             ))}

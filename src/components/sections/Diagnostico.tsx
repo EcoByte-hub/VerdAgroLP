@@ -75,9 +75,9 @@ export default function Diagnostico() {
                 <span className="size-2.5 rounded-full bg-areia" />
                 <span className="size-2.5 rounded-full bg-areia" />
                 <span className="size-2.5 rounded-full bg-areia" />
-                <span className="ml-3 font-mono text-[11px] tracking-wider text-tinta-soft">verdagro.app/diagnostico</span>
+                <span className="ml-3 hidden font-mono text-[11px] tracking-wider text-tinta-soft sm:inline">verdagro.app/diagnostico</span>
               </div>
-              <span className="tag-demo text-tinta-soft">Dados demonstrativos</span>
+              <span className="tag-demo whitespace-nowrap text-tinta-soft">Dados demonstrativos</span>
             </div>
 
             <div className="grid lg:grid-cols-[0.85fr_1.15fr]">

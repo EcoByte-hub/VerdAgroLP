@@ -136,7 +136,7 @@ export default function HeroMap() {
 
       {/* Cartão flutuante: propriedade */}
       <div
-        className="absolute -bottom-6 -left-2 w-[220px] rounded-2xl border border-areia bg-palha-50 p-4 shadow-[0_24px_50px_-20px_rgba(8,24,15,0.5)] sm:-left-10 sm:w-[240px]"
+        className="absolute -bottom-6 -left-2 w-[200px] rounded-2xl border border-areia bg-palha-50 p-4 shadow-[0_24px_50px_-20px_rgba(8,24,15,0.5)] sm:-left-10 sm:w-[240px]"
         style={{ animation: 'va-float 6s ease-in-out infinite' }}
       >
         <div className="flex items-center justify-between">
@@ -158,7 +158,7 @@ export default function HeroMap() {
 
       {/* Cartão flutuante: diagnóstico IA */}
       <div
-        className="absolute -top-6 -right-2 w-[230px] rounded-2xl border border-mata-700 bg-mata-800/95 p-4 text-palha shadow-[0_24px_50px_-20px_rgba(8,24,15,0.7)] backdrop-blur sm:-right-8 sm:w-[250px]"
+        className="absolute -top-6 -right-2 w-[210px] rounded-2xl border border-mata-700 bg-mata-800/95 p-4 text-palha shadow-[0_24px_50px_-20px_rgba(8,24,15,0.7)] backdrop-blur sm:-right-8 sm:w-[250px]"
         style={{ animation: 'va-float 7s ease-in-out 1s infinite' }}
       >
         <div className="flex items-center gap-2 font-mono text-[10px] tracking-widest text-broto uppercase">
