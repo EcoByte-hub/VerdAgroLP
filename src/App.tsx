@@ -8,6 +8,7 @@ import Modules from './components/sections/Modules';
 import Traceability from './components/sections/Traceability';
 import Market from './components/sections/Market';
 import Business from './components/sections/Business';
+import Trust from './components/sections/Trust';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Traceability />
         <Market />
         <Business />
+        <Trust />
       </main>
     </ClickSpark>
   );
