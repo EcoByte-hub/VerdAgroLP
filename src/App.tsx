@@ -1,6 +1,8 @@
 import ClickSpark from './components/reactbits/ClickSpark/ClickSpark';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
+import Problem from './components/sections/Problem';
+import Solution from './components/sections/Solution';
 
 export default function App() {
   return (
@@ -8,6 +10,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Problem />
+        <Solution />
       </main>
     </ClickSpark>
   );

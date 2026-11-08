@@ -108,8 +108,8 @@ export default function HeroMap() {
 
           {/* Coordenadas */}
           <g fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#4f8a5b" letterSpacing="1">
-            <text x="24" y="34">LAT -16.6799</text>
-            <text x="24" y="50">LON -49.2550</text>
+            <text x="24" y="34">LAT -17.7923</text>
+            <text x="24" y="50">LON -50.9192</text>
             <text x="440" y="540">ESC 1:25.000</text>
           </g>
         </svg>

@@ -42,7 +42,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a href="#contato" className="btn-primary hidden !px-5 !py-2.5 text-sm sm:inline-flex">
+          <a href="#contato" className="btn-primary hidden px-5! py-2.5! text-sm sm:inline-flex">
             Conheça o projeto
           </a>
           <button
