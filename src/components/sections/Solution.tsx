@@ -1,8 +1,18 @@
 import { useState } from 'react';
-import { ArrowUpRight, Building2, Check, Tractor } from 'lucide-react';
+import { ArrowUpRight, Building2, Check, FolderKanban, Handshake, Map, Route, Sparkles, Store, Tractor } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import AnimatedContent from '../reactbits/AnimatedContent/AnimatedContent';
-import { audiences } from '../../data/content';
+import SpotlightCard from '../reactbits/SpotlightCard/SpotlightCard';
+import { audiences, modules } from '../../data/content';
+
+const MODULE_ICONS = {
+  map: Map,
+  sparkles: Sparkles,
+  folder: FolderKanban,
+  store: Store,
+  handshake: Handshake,
+  route: Route,
+} as const;
 
 type Key = keyof typeof audiences;
 
@@ -16,7 +26,7 @@ export default function Solution() {
   const data = audiences[active];
 
   return (
-    <section id="solucao" className="grain relative overflow-hidden bg-mata-900 py-28 text-palha sm:py-36">
+    <section id="solucao" className="grain relative overflow-hidden bg-mata-900 py-24 text-palha sm:py-28">
       <div className="bg-grid pointer-events-none absolute inset-0 text-palha opacity-[0.04]" aria-hidden="true" />
 
       <div className="container-va relative">
@@ -113,6 +123,51 @@ export default function Solution() {
             </AnimatePresence>
           </div>
         </AnimatedContent>
+
+        {/* Módulos da plataforma */}
+        <div id="plataforma" className="mt-20 scroll-mt-28">
+          <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
+            <h3 className="font-display text-3xl leading-tight sm:text-4xl">
+              Seis módulos, <em className="font-light text-broto">uma jornada</em> só.
+            </h3>
+            <p className="text-palha/70 lg:pb-1">
+              Do cadastro da propriedade à negociação com a empresa compradora, cada etapa conversa com a próxima e
+              deixa um rastro verificável.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {modules.map((m, i) => {
+              const Icon = MODULE_ICONS[m.icon];
+              return (
+                <AnimatedContent key={m.n} distance={40} duration={0.8} delay={(i % 3) * 0.08} className="h-full">
+                  <SpotlightCard
+                    theme="dark"
+                    spotlightColor="rgba(197, 242, 92, 0.18)"
+                    className="group h-full rounded-[var(--radius-card)]! p-6!"
+                    style={
+                      {
+                        '--spotlight-card-surface': '#153828',
+                        '--spotlight-card-border': 'rgba(197, 242, 92, 0.12)',
+                      } as React.CSSProperties
+                    }
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-mata-700 bg-mata-900 text-broto transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                        <Icon size={20} strokeWidth={1.5} />
+                      </span>
+                      <div>
+                        <span className="font-mono text-[11px] text-palha/40">Módulo {m.n}</span>
+                        <h4 className="font-display text-xl text-palha">{m.title}</h4>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-palha/65">{m.text}</p>
+                  </SpotlightCard>
+                </AnimatedContent>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

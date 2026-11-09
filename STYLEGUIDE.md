@@ -152,7 +152,6 @@ Princípio: **o movimento revela dado, não decora.** Easing padrão `--ease-bro
 | `GlareHover` | Cards de modelo de negócio | Reflexo sutil ao passar o mouse |
 | `CountUp` | Números de mercado | Dados ganham peso ao entrar na tela |
 | `ScrollReveal` | Manifesto | Leitura guiada pelo scroll |
-| `ScrollVelocity` | Faixa de práticas sustentáveis | Ritmo de campo/colheita |
 | `AnimatedContent` | Entrada de blocos | Revelação consistente em toda a página |
 
 ---

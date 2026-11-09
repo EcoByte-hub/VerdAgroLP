@@ -60,7 +60,6 @@ const MOTION = [
   ['GlareHover', 'Modelo de negócio'],
   ['CountUp', 'Números de mercado'],
   ['ScrollReveal', 'Manifesto'],
-  ['ScrollVelocity', 'Faixa de práticas'],
   ['AnimatedContent', 'Entrada de blocos'],
 ];
 

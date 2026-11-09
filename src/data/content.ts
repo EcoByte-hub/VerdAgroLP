@@ -7,8 +7,35 @@ export const nav = [
   { label: 'Problema', href: '#problema' },
   { label: 'Solução', href: '#solucao' },
   { label: 'Diagnóstico', href: '#diagnostico' },
-  { label: 'Plataforma', href: '#plataforma' },
+  { label: 'Rastreabilidade', href: '#rastreabilidade' },
   { label: 'Negócio', href: '#negocio' },
+];
+
+export const marketStats = [
+  {
+    value: 5.07,
+    decimals: 2,
+    prefix: '',
+    suffix: ' mi',
+    label: 'estabelecimentos agropecuários no Brasil',
+    source: 'IBGE, Censo Agropecuário 2017',
+  },
+  {
+    value: 77,
+    decimals: 0,
+    prefix: '',
+    suffix: '%',
+    label: 'deles são de agricultura familiar, o público que mais fica de fora',
+    source: 'IBGE, Censo Agropecuário 2017',
+  },
+  {
+    value: 314.3,
+    decimals: 1,
+    prefix: 'até ',
+    suffix: ' mi',
+    label: 'créditos de carbono que o agro pode gerar entre 2025 e 2035 (cenário integral)',
+    source: 'ABAG / Carbonn Nature, Instituto Equilíbrio e IEAg, 2026',
+  },
 ];
 
 export const problems = {
@@ -120,15 +147,6 @@ export const journey = [
   { step: 'Empresa', text: 'Uma empresa pesquisa projetos e consulta as informações.' },
   { step: 'Negociação', text: 'A empresa manifesta interesse e envia uma solicitação.' },
   { step: 'Resultado', text: 'O produtor recebe o interesse direto no seu painel.' },
-];
-
-export const practices = [
-  'Plantio direto',
-  'Rotação de culturas',
-  'Recuperação de pastagens',
-  'Culturas de cobertura',
-  'Integração lavoura-pecuária',
-  'Manejo do solo',
 ];
 
 export const business = [

@@ -19,9 +19,6 @@ export default function Footer() {
                 {n.label}
               </a>
             ))}
-            <a href="#rastreabilidade" className="text-palha/70 transition-colors hover:text-broto">
-              Rastreabilidade
-            </a>
             <a href="#styleguide" className="text-palha/70 transition-colors hover:text-broto">
               Styleguide
             </a>

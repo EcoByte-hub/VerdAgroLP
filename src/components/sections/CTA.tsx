@@ -8,7 +8,7 @@ const REPO = 'https://github.com/EcoByte-hub/VerdAgroLP';
 
 export default function CTA() {
   return (
-    <section id="contato" className="relative bg-palha pb-28 sm:pb-36">
+    <section id="contato" className="relative bg-palha pb-24 sm:pb-28">
       <div className="container-va">
         <AnimatedContent distance={60} scale={0.97} duration={1}>
           <div className="relative overflow-hidden rounded-[2.25rem] bg-broto px-6 py-16 text-mata-900 sm:px-14 sm:py-24">

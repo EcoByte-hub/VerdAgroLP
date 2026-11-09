@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Check, FileText, Leaf, Loader2, MapPin, RotateCcw, Sparkles, Sprout } from 'lucide-react';
 import AnimatedContent from '../reactbits/AnimatedContent/AnimatedContent';
 import Magnet from '../reactbits/Magnet/Magnet';
+import { journey } from '../../data/content';
 
 const INPUTS = [
   { label: 'Localização', value: 'Rio Verde · GO', Icon: MapPin },
@@ -52,7 +53,7 @@ export default function Diagnostico() {
   };
 
   return (
-    <section id="diagnostico" className="relative bg-areia/45 py-28 sm:py-36">
+    <section id="diagnostico" className="relative bg-areia/45 py-24 sm:py-28">
       <div className="container-va">
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
@@ -202,6 +203,35 @@ export default function Diagnostico() {
             </div>
           </div>
         </AnimatedContent>
+
+        {/* Jornada da demonstração */}
+        <div className="mt-20 grid gap-4 lg:grid-cols-2 lg:items-end">
+          <h3 className="font-display text-3xl leading-tight text-mata-900 sm:text-4xl">
+            A demonstração completa <em className="font-light text-musgo">em sete passos.</em>
+          </h3>
+          <p className="text-tinta-soft lg:pb-1">
+            No MVP, a demonstração vai do cadastro de uma propriedade até uma empresa manifestar interesse nela, com
+            dados fictícios identificados como tal.
+          </p>
+        </div>
+
+        <ol className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-7">
+          {journey.map((j, i) => (
+            <li key={j.step} className="h-full">
+              <AnimatedContent distance={30} delay={i * 0.06} className="h-full">
+                <div className="group flex h-full flex-col rounded-[1.25rem] border border-areia bg-palha-50 p-5 transition-colors duration-300 hover:border-mata-900 hover:bg-mata-900">
+                  <span className="font-mono text-[11px] text-musgo transition-colors group-hover:text-broto">
+                    Etapa {i + 1}
+                  </span>
+                  <p className="mt-5 font-display text-xl text-mata-900 transition-colors group-hover:text-palha">{j.step}</p>
+                  <p className="mt-2 text-[13px] leading-snug text-tinta-soft transition-colors group-hover:text-palha/70">
+                    {j.text}
+                  </p>
+                </div>
+              </AnimatedContent>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

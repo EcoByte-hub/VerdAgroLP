@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'motion/react';
-import { BadgeCheck, CircleDashed, ShieldCheck } from 'lucide-react';
+import { BadgeCheck, CircleDashed, Scale, ShieldCheck } from 'lucide-react';
 import AnimatedContent from '../reactbits/AnimatedContent/AnimatedContent';
-import { stages } from '../../data/content';
+import { stages, trust } from '../../data/content';
 
 const KIND = {
   estimativa: {
@@ -28,7 +28,7 @@ export default function Traceability() {
   const progress = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1]), { stiffness: 120, damping: 30 });
 
   return (
-    <section id="rastreabilidade" className="grain relative overflow-hidden bg-mata-900 py-28 text-palha sm:py-36">
+    <section id="rastreabilidade" className="grain relative overflow-hidden bg-mata-900 py-24 text-palha sm:py-28">
       <div className="bg-grid pointer-events-none absolute inset-0 text-palha opacity-[0.035]" aria-hidden="true" />
       <div className="container-va relative">
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
@@ -90,13 +90,51 @@ export default function Traceability() {
           </ol>
         </div>
 
-        <AnimatedContent distance={40}>
-          <p className="mt-16 max-w-3xl border-l-2 border-broto pl-5 text-palha/75">
-            O VerdAgro <strong className="text-palha">não emite certificações próprias</strong>. Organizamos
-            informações, apoiamos a estruturação dos projetos, facilitamos o monitoramento e conectamos os
-            participantes do mercado. A validação e a verificação são sempre independentes.
-          </p>
-        </AnimatedContent>
+        {/* Integridade e regulação */}
+        <div className="mt-20 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+          <AnimatedContent distance={40} className="h-full">
+            <div className="h-full rounded-[var(--radius-card)] border border-mata-700 bg-mata-800/60 p-7 sm:p-9">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-broto text-mata-900">
+                  <ShieldCheck size={20} strokeWidth={1.6} />
+                </span>
+                <h3 className="font-display text-2xl sm:text-[1.75rem]">Princípios de integridade</h3>
+              </div>
+              <p className="mt-5 text-palha/70">
+                O VerdAgro <strong className="text-palha">não emite certificações próprias</strong>. Organizamos
+                informações, apoiamos a estruturação dos projetos, facilitamos o monitoramento e conectamos os
+                participantes do mercado. A validação e a verificação são sempre independentes, e todo projeto é
+                organizado em torno de:
+              </p>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {trust.principles.map(p => (
+                  <li key={p} className="rounded-full border border-mata-700 bg-mata-900 px-4 py-2 text-sm font-medium text-palha/85">
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimatedContent>
+
+          <AnimatedContent distance={40} delay={0.1} className="h-full">
+            <div className="h-full rounded-[var(--radius-card)] border border-mata-700 bg-mata-950/50 p-7 sm:p-9">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex size-11 items-center justify-center rounded-2xl border border-mata-700 bg-mata-800 text-broto">
+                  <Scale size={20} strokeWidth={1.6} />
+                </span>
+                <h3 className="font-display text-2xl sm:text-[1.75rem]">Referências técnicas</h3>
+              </div>
+              <ul className="mt-6 divide-y divide-mata-700">
+                {trust.references.map(r => (
+                  <li key={r.name} className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                    <span className="font-mono text-sm text-broto">{r.name}</span>
+                    <span className="text-sm text-palha/70 sm:text-right">{r.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimatedContent>
+        </div>
       </div>
     </section>
   );

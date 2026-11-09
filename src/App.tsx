@@ -5,11 +5,8 @@ import Hero from './components/sections/Hero';
 import Problem from './components/sections/Problem';
 import Solution from './components/sections/Solution';
 import Diagnostico from './components/sections/Diagnostico';
-import Modules from './components/sections/Modules';
 import Traceability from './components/sections/Traceability';
-import Market from './components/sections/Market';
 import Business from './components/sections/Business';
-import Trust from './components/sections/Trust';
 import CTA from './components/sections/CTA';
 import Footer from './components/layout/Footer';
 import Styleguide from './pages/Styleguide';
@@ -48,11 +45,8 @@ function Landing() {
         <Problem />
         <Solution />
         <Diagnostico />
-        <Modules />
         <Traceability />
-        <Market />
         <Business />
-        <Trust />
         <CTA />
       </main>
       <Footer />
