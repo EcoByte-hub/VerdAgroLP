@@ -15,8 +15,8 @@ export default function Trust() {
             </h2>
           </div>
           <p className="lead lg:pb-2">
-            No MVP, mostramos o ecossistema funcionando de ponta a ponta: do cadastro de uma propriedade até a empresa
-            demonstrando interesse. Tudo com dados fictícios, claramente identificados.
+            No MVP, a demonstração vai do cadastro de uma propriedade até uma empresa manifestar interesse nela, com
+            dados fictícios identificados como tal.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function Trust() {
                 <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-mata-900 text-broto">
                   <ShieldCheck size={20} strokeWidth={1.6} />
                 </span>
-                <h3 className="font-display text-2xl text-mata-900 sm:text-[1.75rem]">Integridade antes de escala</h3>
+                <h3 className="font-display text-2xl text-mata-900 sm:text-[1.75rem]">Princípios de integridade</h3>
               </div>
               <p className="mt-5 text-tinta-soft">
                 A plataforma foi pensada para respeitar as regras do mercado de carbono e nunca confundir estimativa com

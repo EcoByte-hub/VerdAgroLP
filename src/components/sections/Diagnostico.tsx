@@ -58,12 +58,12 @@ export default function Diagnostico() {
           <div>
             <span className="eyebrow text-musgo">Funcionalidade destaque</span>
             <h2 className="h-section mt-5 text-mata-900">
-              Diagnóstico <em className="font-light text-musgo">Inteligente</em> da Propriedade
+              Diagnóstico <em className="font-light text-musgo">inteligente</em> da propriedade
             </h2>
           </div>
           <p className="lead lg:pb-2">
-            O produtor informa o básico. A IA cruza dados geográficos e climáticos e devolve um mapa claro do que já
-            existe, do que pode melhorar e do que precisa ser comprovado. <strong className="text-tinta">Sem prometer crédito antes da hora.</strong>
+            O produtor informa o básico e a IA cruza dados geográficos e climáticos para mostrar o que a propriedade já
+            tem, o que pode melhorar e o que ainda precisa ser comprovado. O resultado é preliminar e não garante crédito.
           </p>
         </div>
 

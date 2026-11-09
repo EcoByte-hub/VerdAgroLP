@@ -164,7 +164,7 @@ export const differentials = [
     text: 'Enquanto a maioria vende créditos prontos, o VerdAgro ajuda a estruturar o projeto desde o início.',
   },
   {
-    title: 'Dois lados, um ecossistema',
+    title: 'Um ambiente para cada público',
     text: 'Ambientes e jornadas diferentes para quem produz e para quem compra.',
   },
 ];

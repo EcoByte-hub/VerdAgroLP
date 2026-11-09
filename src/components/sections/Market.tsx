@@ -56,7 +56,7 @@ export default function Market() {
 
         <p className="mt-4 text-xs text-tinta-soft">
           Potencial estimado não representa créditos disponíveis nem receita garantida. Ele depende de projetos
-          estruturados, metodologia e verificação independente, exatamente a lacuna que o VerdAgro ataca.
+          estruturados, metodologia e verificação independente, e é nessa parte que o VerdAgro atua.
         </p>
 
         {/* Diferenciais */}
@@ -64,8 +64,8 @@ export default function Market() {
           <div>
             <span className="eyebrow text-musgo">Diferenciais</span>
             <h3 className="mt-5 font-display text-4xl leading-[1.05] text-mata-900 sm:text-5xl">
-              Não é só um marketplace.{' '}
-              <em className="font-light text-musgo">É a infraestrutura antes dele.</em>
+              A estrutura que vem{' '}
+              <em className="font-light text-musgo">antes do marketplace.</em>
             </h3>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
