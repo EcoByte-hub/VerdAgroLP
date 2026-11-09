@@ -4,12 +4,40 @@
  */
 
 export const nav = [
+  { label: 'O que é', href: '#credito-de-carbono' },
   { label: 'Problema', href: '#problema' },
   { label: 'Solução', href: '#solucao' },
   { label: 'Diagnóstico', href: '#diagnostico' },
   { label: 'Rastreabilidade', href: '#rastreabilidade' },
   { label: 'Negócio', href: '#negocio' },
 ];
+
+export const carbonBasics = {
+  kinds: [
+    {
+      title: 'Redução',
+      text: 'Uma emissão que deixou de acontecer, como usar menos fertilizante nitrogenado na lavoura.',
+    },
+    {
+      title: 'Remoção',
+      text: 'Carbono retirado do ar e guardado no solo ou na vegetação, como no plantio direto e na recuperação de pastagens.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Como a fazenda gera crédito',
+      text: 'Plantio direto, culturas de cobertura, integração lavoura-pecuária e recuperação de pastagens aumentam o carbono no solo. Vira crédito a diferença entre o resultado do projeto e o que aconteceria sem ele, a chamada linha de base.',
+    },
+    {
+      title: 'Por que precisa de verificação',
+      text: 'O ganho é medido com uma metodologia reconhecida e conferido por um auditor independente. Só depois disso o crédito é emitido e registrado com número de série.',
+    },
+    {
+      title: 'Quem compra e por quê',
+      text: 'Empresas que querem compensar emissões que ainda não conseguem cortar e, com o SBCE, empresas sujeitas a limites obrigatórios de emissão. Ao usar o crédito, a compradora o aposenta no registro e ele não pode ser vendido de novo.',
+    },
+  ],
+};
 
 export const marketStats = [
   {

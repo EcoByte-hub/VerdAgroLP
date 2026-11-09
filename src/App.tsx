@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ClickSpark from './components/reactbits/ClickSpark/ClickSpark';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
+import CarbonCredit from './components/sections/CarbonCredit';
 import Problem from './components/sections/Problem';
 import Solution from './components/sections/Solution';
 import Diagnostico from './components/sections/Diagnostico';
@@ -42,6 +43,7 @@ function Landing() {
       <Navbar />
       <main>
         <Hero />
+        <CarbonCredit />
         <Problem />
         <Solution />
         <Diagnostico />
