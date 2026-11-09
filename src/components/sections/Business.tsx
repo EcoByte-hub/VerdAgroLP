@@ -22,12 +22,12 @@ export default function Business() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="rail mt-14 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {business.map((b, i) => {
             const Icon = ICONS[i];
             const entry = i === 0;
             return (
-              <AnimatedContent key={b.who} distance={50} delay={i * 0.08} className="h-full">
+              <AnimatedContent key={b.who} distance={50} delay={i * 0.08} className="rail-item h-full">
                 <GlareHover
                   width="100%"
                   height="100%"
@@ -72,9 +72,9 @@ export default function Business() {
               A estrutura que vem <em className="font-light text-musgo">antes do marketplace.</em>
             </h3>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="rail gap-4 sm:grid-cols-2">
             {differentials.map((d, i) => (
-              <AnimatedContent key={d.title} distance={40} delay={i * 0.08} className="h-full">
+              <AnimatedContent key={d.title} distance={40} delay={i * 0.08} className="rail-item h-full">
                 <div className="group h-full rounded-[1.25rem] border border-areia bg-palha-50 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-musgo/30 hover:shadow-[0_20px_40px_-24px_rgba(14,42,31,0.35)]">
                   <span className="font-mono text-xs text-musgo">0{i + 1}</span>
                   <p className="mt-3 font-display text-xl text-mata-900">{d.title}</p>

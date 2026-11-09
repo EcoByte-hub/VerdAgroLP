@@ -136,11 +136,11 @@ export default function Solution() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="rail mt-10 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {modules.map((m, i) => {
               const Icon = MODULE_ICONS[m.icon];
               return (
-                <AnimatedContent key={m.n} distance={40} duration={0.8} delay={(i % 3) * 0.08} className="h-full">
+                <AnimatedContent key={m.n} distance={40} duration={0.8} delay={(i % 3) * 0.08} className="rail-item h-full">
                   <SpotlightCard
                     theme="dark"
                     spotlightColor="rgba(197, 242, 92, 0.18)"

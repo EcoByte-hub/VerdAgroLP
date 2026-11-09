@@ -215,9 +215,9 @@ export default function Diagnostico() {
           </p>
         </div>
 
-        <ol className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-7">
+        <ol className="rail mt-10 gap-3 sm:grid-cols-2 lg:grid-cols-7">
           {journey.map((j, i) => (
-            <li key={j.step} className="h-full">
+            <li key={j.step} className="rail-item h-full">
               <AnimatedContent distance={30} delay={i * 0.06} className="h-full">
                 <div className="group flex h-full flex-col rounded-[1.25rem] border border-areia bg-palha-50 p-5 transition-colors duration-300 hover:border-mata-900 hover:bg-mata-900">
                   <span className="font-mono text-[11px] text-musgo transition-colors group-hover:text-broto">
